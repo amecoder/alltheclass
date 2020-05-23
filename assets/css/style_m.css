@@ -1,0 +1,270 @@
+@charset "utf-8";
+
+* { margin:0; padding:0; box-sizing: border-box;}
+body {color:#000;word-break: break-word;font-family: 'Noto Sans KR', sans-serif;}
+body.on {overflow: hidden;}
+ul, li, ol { list-style: none;}
+a { text-decoration: none; color:#000;}
+img {max-width: 100%; vertical-align: middle;}
+button { border:none; background: transparent;}
+:focus, :active { outline: none;}
+.hidden { font-size: 0; text-indent: -99999px; display: none;}
+#wrap { max-width: 768px;margin: 0 auto;}
+.wrap { width: 100%; padding: 0 4%;}
+.cb:after { clear: both; content: ''; display: block;}
+
+/* top버튼 공통 */
+.mTop { display: block; position: fixed; z-index: 800; bottom: 20px; right: 5%; width: 50px; height: 50px; line-height: 49px; text-align:center;}
+
+/* headInner 공통 */
+.headInner {background:#FEC22D; padding: 18px 0 66px; border-bottom-right-radius: 100px;}
+.headInner header {position: relative;width: 100%; height: 88px;}
+.headInner header > h2 { text-align: center;}
+.headInner header .countryMenu { position: absolute; top: 30px; right: 4%;}
+.headInner header .countryMenu .img {display: inline-block; margin-right: 10px; vertical-align: middle; width: 27px; height: 27px; border-radius: 50%;}
+.headInner header .countryMenu button {}
+.headInner .textInner {padding: 29px 0 0 42px;}
+.headInner .textInner h4 { text-align: left; font-size: 24px;}
+.headInner .textInner h4 p { font-size: 14px;}
+
+/* footer 공통 */
+.footer.on { background: #fff;}
+.footer {position: relative;top:-2px; height: 120px; background: #FEC22D;}
+footer {padding-top: 57px; position: relative;top:-1px; z-index: 2;background:#000;border-top-left-radius: 100px;}
+footer > p { font-size: 17px; text-align: center; color: #fff;}
+footer .goBtn { display: block; width: 111px; height: 35px; margin: 15px auto; line-height: 33px; border: 1px solid #fff; border-radius: 30px; text-align: center; font-size: 18px; color: #fff;}
+footer address {font-style: normal;padding:40px 0;}
+footer address .copy {padding-top:34px;font-size:13px;color: #999; text-align: center;}
+footer address span { display: block; padding: 6px 4%;}
+footer address span b {display: inline-block;width:110px; vertical-align: middle;color: #999;font-size:12px;font-style: normal;}
+footer address span p {display: inline-block;vertical-align: middle;color: #fff;font-size:14px;}
+footer address span a {display: inline-block;vertical-align: middle;color: #FEC22D;font-size:12px;text-decoration: underline; text-underline-position: under;}
+
+/* moreBtn 전체보기버튼 공통 */
+.moreBtn {display: block; width: 154px; height: 44px; margin: 20px auto; text-align: center; border:1px solid #000; border-radius: 30px; font-weight: 900;}
+.moreBtn img { padding-right: 14px;}
+
+/* popupSelect 팝업 */
+#popup {display: none; position: fixed; z-index: 1000; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,.5);}
+.popupList > button {display: inline-block;}
+.popupList > button::after {clear: both; content: ''; display: block;}
+.popupList > button em {display: inline-block; vertical-align: middle; padding-left: 10px; font-style: normal; font-size: 14px;}
+
+.popupSelect .popupList { position: absolute; -webkit-transform: translate(-50%,-50%); -ms-transform: translate(-50%,-50%);transform: translate(-50%,-50%); top: 50%;left: 50%;  width: 90%; padding: 30px 14%; min-height: 200px; background: #fff; border-radius: 20px; text-align: center;box-shadow: 3px 3px 10px rgba(0,0,0,.3);}
+.popupSelect .popupList ul {width: 150px; height: 220px; margin: 52px auto 0; clear: both; overflow-y: auto;}
+.popupSelect .popupList ul li {padding-bottom: 20px; font-size: 24px; color: #666; text-align: left;}
+.popupSelect .popupList ul li.on { font-weight: 500; color: #FEC22D; background: url('../img/icon11.png') no-repeat; background-position: right 0 top 12px;}
+
+/* popupAlways 팝업 */
+.popupAlways .popupList { position: absolute; -webkit-transform: translate(-50%,-50%); -ms-transform: translate(-50%,-50%);transform: translate(-50%,-50%); top: 50%;left: 50%;  width: 90%; padding: 30px 14% 70px; min-height: 200px; background: #fff; border-radius: 20px; text-align: center;box-shadow: 3px 3px 10px rgba(0,0,0,.3);}
+.popupAlways .popupList .inner {width: 100%; margin-top: 40px; clear: both; overflow-y: auto;}
+.popupAlways .popupList .inner b { display: block; font-size: 22px;}
+.popupAlways .popupList .inner i { display: block; font-size: 16px; font-style: normal;color: #666;}
+
+/* popupCountry 팝업 */
+/* .popupCountry .popupList h4 {padding: 26px 0; font-size: 24px; font-weight: normal;} */
+.popupCountry .popupList .search {width: 100%; height: 48px; margin: 20px 0 10px; border-radius:5px; border: 1px solid #999; padding: 5px 10px;}
+.popupCountry .popupList .search input { float: left; width: calc(100% - 40px); height: 100%; font-size: 16px; color: #000; border: none;}
+.popupCountry .popupList .search input::placeholder { color: #A6A6A6;font-size: 14px; font-weight: 600;}
+.popupCountry .popupList .search button { float: right; width: 35px; height: 35px; padding: 0 10px;}
+.popupCountry .popupList .search button img { max-width: none;}
+
+.popupCountry .popupList .tit {display: block; padding-bottom: 20px; font-size: 12px; font-style: normal; color: #666;}
+
+.popupCountry .popupList { position: absolute; -webkit-transform: translate(-50%,-50%); -ms-transform: translate(-50%,-50%);transform: translate(-50%,-50%); top: 50%;left: 50%;  width: 90%; padding: 30px 7%; height: 90%; background: #fff; border-radius: 20px; text-align: center;box-shadow: 3px 3px 10px rgba(0,0,0,.3);}
+.popupCountry .popupList .listBox {width: 100%; height: calc(100% - 160px); margin: 0 auto; clear: both; overflow-y: auto;}
+.popupCountry .popupList .listBox .conList {text-align: left; font-size: 0;}
+.popupCountry .popupList .listBox .conList .title {padding-bottom: 28px; font-size: 14px; color: #666; text-align: left; background: url('../img/icon02.png') no-repeat;background-position: right 0 top 12px;}
+.popupCountry .popupList .listBox .conList.on .title {background: url('../img/icon05.png') no-repeat; background-position: right 0 top 12px;}
+.popupCountry .popupList .listBox .conList.on .title h3 { font-weight: 500; color: #FEC22D; }
+.popupCountry .popupList .listBox .conList .title h3 { display: inline-block; vertical-align: middle; padding-left: 10px;}
+.popupCountry .popupList .listBox .conList .cityList { display: none;}
+.popupCountry .popupList .listBox .conList .cityList li {padding: 0 0 28px 40px;}
+.popupCountry .popupList .listBox .conList .cityList li.on {background: url('../img/icon11.png') no-repeat; background-position: left 5px; background-size: auto;}
+.popupCountry .popupList .listBox .conList .cityList li.on b {color: #FEC22D; font-weight: bold;}
+.popupCountry .popupList .listBox .conList .cityList b { display: inline-block; vertical-align: middle; font-size: 16px; font-weight: lighter; color: #666;}
+.popupCountry .popupList .listBox .conList .cityList .time { width: 70px;}
+
+
+/* popupChoice 팝업 */
+.popupChoice { position: absolute; top: 88px; right: 4%; z-index: 100;border-radius: 20px;}
+.popupChoice .arrow { position: absolute; top: -24px; right: 8%; z-index: -1;}
+.popupChoice ul {width: 290px; padding: 26px; border-radius: 20px; background: #fff; overflow: hidden;box-shadow: 4px 4px 6px 2px rgba(0,0,0,.2);}
+.popupChoice ul li b { font-size: 16px; display: block;}
+.popupChoice ul li p { font-size: 16px; word-break: keep-all;}
+.popupChoice ul li:not(.text) { padding-top:14px; text-align: right;}
+.popupChoice ul li button { width: 98px; padding: 6px 0; font-weight: 900; font-size: 18px; text-align: center; border: 1px solid #000; border-radius: 50px;}
+
+
+
+/******************** main ******************/
+/* container01 */
+.container01 {position: relative;top:-1px; background: #FEC22D;}
+.container01 .bg {display: block;position: absolute;width: 100%;height: 100px;border-top-left-radius: 100px;background:#fff;z-index: 1;left: 0;top: -1px;}
+.container01 section { position: relative; z-index: 1;}
+.container01 section h2 { padding-top:57px;text-align: center;font-size: 20px; font-weight: 900;}
+.container01 section .list {padding-bottom: 76px; background: #fff;border-bottom-right-radius: 100px;overflow: hidden;}
+.container01 section .list .now h2 {padding-top: 10px; text-align: center; font-size: 38px;font-weight: 900;}
+.container01 section .list .daySelect { cursor: pointer; position: relative;}
+.container01 section .list .daySelect .click {position: absolute; top: -31px; right: 4%; font-size: 14px;}
+.container01 section .list .daySelect .click img { padding-left: 10px;}
+.container01 section .list .day { margin-top: 10px;}
+.container01 section .list .day ul { width: 100%; text-align: center; font-size: 0; border-top: 1px solid #F2F2F2; border-bottom: 1px solid #F2F2F2;}
+.container01 section .list .day ul li { display: inline-block;vertical-align: top;margin: 0 2px;}
+.container01 section .list .day ul li a {display: block; padding: 18px 10px; font-size: 15px; color: #666;}
+.container01 section .list .day ul li.on a {position: relative; border-bottom: 1px solid #FEC22D; font-weight: 600; color: #FEC22D;}
+.container01 section .list .day ul li.on a::before {position: absolute;content: '';display: block; width: 5px; height: 5px;top: 5px; left: 50%; -webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%); border-radius: 100%;background: #FEC22D;}
+
+.container01 section .list .listsdl {padding: 9px 0 9px 4%; border-bottom: 1px solid #F2F2F2;}
+.container01 section .list .listsdl:last-of-type {border-bottom: none;}
+.container01 section .list .listsdl .time { width: 124px; float:left;}
+.container01 section .list .listsdl .time span {display: inline-block; height: 20px; color: #FEC22D;font-size: 14px;font-weight: 600;}
+.container01 section .list .listsdl .time p { color: #FEC22D; font-size: 16px;font-weight: 900;}
+
+.container01 section .list .listsdl .text { width: calc(100% - 126px); float:left; padding: 7px 4% 0 0;}
+.container01 section .list .listsdl .text p { font-size:18px;color:#666;}
+
+.container01 section .list .listsdl.new {}
+.container01 section .list .listsdl.new .text {position: relative;}
+.container01 section .list .listsdl.new .text::before {position: absolute;content: '첫 파티!';display: block; top: -9px;right: 0; color: #FEC22D;background: #000; padding: 5px 15px; border-bottom-left-radius: 15px;}
+
+.container01 section .list .listsdl.always .time p {background: url('../img/icon03.png') no-repeat; background-position: left 36px top 0; background-size: 18px 18px;}
+.container01 section .list .listsdl.ing {background:#FFE7AB;}
+.container01 section .list .listsdl.ing .time span {color: #000;}
+.container01 section .list .listsdl.ing .time p {color: #000;}
+.container01 section .list .listsdl.ing .text p {color: #000;font-weight: 600;}
+.container01 section .list .listsdl.on .time span {color: #000;}
+.container01 section .list .listsdl.off .time span {color:#FFEDC0;}
+.container01 section .list .listsdl.off .text p {color:#B2B2B2;}
+
+/* container02 */
+.container02 {position: relative;top:-1px; z-index: 0; background: #fff;}
+.container02 .bg {display: block;position: absolute;width: 100%;height: 124px;border-top-left-radius: 100px;background:#FEC22D;z-index: 1;left: 0;top: -1px;}
+.container02 .bg2 {display: block;position: absolute;width: 100%;height: 124px;border-top-left-radius: 100px;background:#000;z-index: 0;left: 0;bottom: 1px;}
+.container02 section { position: relative; z-index: 1;}
+.container02 section > h2 {padding-top:57px; text-align: center; font-size: 20px; font-weight: 900;}
+.container02 section > h2 em { display: block; font-style: normal; font-size: 15px; font-weight: 400;}
+
+.container02 .faqList {padding: 25px 0 76px; background: #FEC22D;border-bottom-right-radius: 100px;overflow: hidden;}
+.container02 .faqList .offList {padding: 0 4%; border-bottom: 1px solid #E4AE28;}
+.container02 .faqList .offList .title { padding: 15px 0; font-size: 0; background: url('../img/icon02.png') no-repeat; background-position: right top 50%; background-size: 16px 9px;}
+.container02 .faqList .offList .title.on { padding: 15px 0; font-size: 0; background: url('../img/icon05.png') no-repeat; background-position: right top 50%; background-size: 16px 9px;}
+.container02 .faqList .offList .title h3 { display: inline-block; width:calc(100% - 32px); vertical-align: middle; padding:0 22px; font-size: 16px; font-weight: 900;}
+.container02 .faqList .sublist {display: none; padding-bottom: 20px;}
+.container02 .faqList .sublist li { font-size: 14px;}
+
+/*앱스토어 파일아이콘*/
+.container02 .faqList .sublist .file {}
+.container02 .faqList .sublist .file p {padding:22px 0 13px; font-size: 14px; text-align: left;}
+.container02 .faqList .sublist .file a { display: inline-block; width:144px; height: 44px;overflow: hidden;}
+.container02 .faqList .sublist .file a:nth-of-type(1) {margin-right: 20px;}
+
+/******************** parteeMain ******************/
+
+/* subHeader 공통 / 타이틀텍스트도 공통 */
+.subHeader {position: relative; width: 100%; min-height: 68px; padding: 24px 0; background: #FEC22D;}
+.subHeader .wrap { width: 100%; height: 100%;}
+.subHeader .wrap button {position: absolute; left: 4%; top: 50%; margin-top: -7px; width: 10px; height: 17px;}
+.subHeader .title {font-size: 20px; text-align: center;}
+
+/* parteeView : 상세페이지 */
+.parteeView {background: #000;}
+.parteeView .sub01 {background: #fff;}
+.parteeView .topImg { width: 100%; text-align: center;} /*height210px*/
+.parteeView .head { padding: 20px 0; background: #fff;}
+.parteeView .head h2 {padding-bottom: 30px; font-size: 19px;font-weight: 500;}
+.parteeView .head ul {width: 100%; font-size: 0; text-align: center;}
+.parteeView .head ul li { width: 33.333%; display: inline-block; vertical-align: top;}
+.parteeView .head ul li a {display: block; font-size: 14px;}
+.parteeView .head ul li a img { display: block; margin: 0 auto 10px;}
+
+.parteeView .name {width: 100%; padding: 11px 4%; border-top: 1px solid #F2F2F2; border-bottom: 1px solid #F2F2F2;}
+.parteeView .name > span { display: inline-block; vertical-align: middle; width: 60px; height: 60px; border-radius: 100%; overflow: hidden;}
+.parteeView .name h2 { display: inline-block; vertical-align: middle; padding-left:20px; font-size: 18px; font-weight: 500;}
+
+.parteeView .parteeInner { padding: 30px 4% 93px; border-bottom-right-radius: 100px;}
+.parteeView .parteeInner .title { font-size: 18px;}
+.parteeView .parteeInner .swiper-container {padding: 20px 0 46px;}
+.parteeView .parteeInner .swiper-container .slide:first-of-type { margin-left:0;}
+.parteeView .parteeInner .swiper-container .slide { width: auto !important; margin: 0 5px;}
+.parteeView .parteeInner .swiper-container .slide > a { display: block; width: 141px;}
+.parteeView .parteeInner .swiper-container .text {margin-top: 16px; height: 52px; overflow: hidden; font-size: 16px; font-weight: 600;}
+
+.parteeView .parteeExplanation { padding-bottom: 30px; font-size: 18px;}
+.parteeView .parteeExplanation .title,
+.parteeView .parteeDay .title,
+.parteeView .parteeChannel .title,
+.parteeView .parteeYoutube .title  {font-weight: 500;}
+.parteeView .parteeExplanation .text,
+.parteeView .parteeDay ul,
+.parteeView .parteeChannel ul,
+.parteeView .parteeYoutube ul,
+.parteeView .parteeImg ul { padding: 22px 0 40px;}
+
+.parteeView .parteeDay ul li { width: 100%; padding: 12px 4%; border-bottom: 1px solid #F2F2F2;}
+.parteeView .parteeDay ul li .day { float: left; width: 128px; font-size: 16px; font-weight: 600; letter-spacing: 1.2px; color: #FEC22D;}
+.parteeView .parteeDay ul li .time {float:left; width: calc(100% - 130px); font-size: 18px; font-weight: 300;}
+
+.parteeView .parteeChannel ul li { width: 100%; padding: 12px 4%; border-bottom: 1px solid #F2F2F2;}
+.parteeView .parteeChannel ul li p {float:left; width: 128px; display: inline-block; font-size: 16px; color: #666;}
+.parteeView .parteeChannel ul li .link {float:left; display: inline-block; font-size:18px;font-weight: 500; text-decoration: underline; text-underline-position: under;}
+
+.parteeView .parteeYoutube .title b,
+.parteeView .parteeImg .title b  { font-size: 20px; color: #000; display: inline-block; vertical-align: baseline;}
+/* .parteeView .parteeYoutube ul, */
+/* .parteeView .parteeImg ul  { padding-right:4%;} */
+
+
+.parteeView .parteeYoutube ul li { width: 100%; height: 196px; margin-bottom: 18px;}
+.parteeView .parteeYoutube ul li iframe { width: 100% !important; height: 196px !important;}
+
+.parteeView .parteeImg ul {font-size: 0;text-align: center;}
+.parteeView .parteeImg ul li { float: left; width: 50%; height: 97px; overflow: hidden; padding: 0 2%; margin-bottom: 4%;}
+.parteeView .parteeImg ul li div { width: 100%; height: 100%; overflow: hidden;}
+.parteeView .parteeImg ul li a { display: block; width: 100%;}
+
+.mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close {height: 40px !important; top:-10px; right: 0 !important; opacity: 1 !important; background: #E4AE28 !important;color: #fff !important;}
+.mfp-close { height: 0; line-height: 0; font-size: 44px;}
+
+/* parteeOpened : 파티개설페이지 */
+.parteeOpened {padding-bottom: 50px; word-break: keep-all;}
+.parteeOpened span { font-size: 18px; display: block; margin: 20px 0 30px;}
+.parteeOpened a { display: block; margin: 0 auto; width: 230px; padding: 20px 0; border: 1px solid #000; border-radius: 50px; font-size: 18px; font-weight: bold; text-align: center;}
+.parteeOpened ul li {padding-bottom: 30px;}
+.parteeOpened ul li h2 {padding-bottom: 20px; font-size: 20px;}
+.parteeOpened ul li p { font-size: 15px;}
+
+/* countryTime : 국가시간선택페이지 */
+.subCountry .popupList .searchForm {background: #FEC22D;}
+.subCountry .popupList .search {width: 90%; height: 48px; margin: 0 auto; background: #fff; border-radius:5px; padding: 5px 10px;}
+.subCountry .popupList .search input { float: left; width: calc(100% - 40px); height: 100%; font-size: 16px; color: #000; border: none;}
+.subCountry .popupList .search input::placeholder { color: #A6A6A6;font-size: 14px; font-weight: 600;}
+.subCountry .popupList .search button { float: right; width: 35px; height: 35px; padding: 0 10px;}
+.subCountry .popupList .search button img { max-width: none;}
+.subCountry .popupList .tit {display: block; text-align: left; padding: 10px 0 10px 4%; font-size: 12px; font-style: normal; color: #fff;}
+.subCountry .popupList {width: 100%; padding: 0 0 30px; background: #fff;text-align: center;}
+.subCountry .popupList .listBox {width: 100%;margin: 20px auto; clear: both; overflow-y: auto;}
+.subCountry .popupList .listBox .conList {text-align: left; font-size: 0;}
+.subCountry .popupList .listBox .conList .title {padding-bottom: 28px; font-size: 14px; color: #666; text-align: left; background: url('../img/icon02.png') no-repeat;background-position: right 20px top 12px;}
+.subCountry .popupList .listBox .conList.on .title {background: url('../img/icon05.png') no-repeat; background-position: right 20px top 12px;}
+.subCountry .popupList .listBox .conList.on .title h3 { font-weight: 500; color: #FEC22D; }
+.subCountry .popupList .listBox .conList .title h3 { display: inline-block; vertical-align: middle; padding-left: 10px;}
+.subCountry .popupList .listBox .conList .cityList { display: none;}
+.subCountry .popupList .listBox .conList .cityList li {padding: 0 0 28px 40px;}
+.subCountry .popupList .listBox .conList .cityList li.on {background: url('../img/icon11.png') no-repeat; background-position: left 5px; background-size: auto;}
+.subCountry .popupList .listBox .conList .cityList li.on b {color: #FEC22D; font-weight: bold;}
+.subCountry .popupList .listBox .conList .cityList b { display: inline-block; vertical-align: middle; font-size: 16px; font-weight: lighter; color: #666;}
+.subCountry .popupList .listBox .conList .cityList .time { width: 70px;}
+.noneText { font-size: 16px; color: #000; text-align: left; padding: 20px 0;}
+
+/* subVide : 동영상페이지 */
+.subVide .parteeYoutube { padding-bottom: 90px;}
+.subVide .parteeYoutube ul { padding: 20px 0;}
+.subVide .parteeYoutube ul li { width: 100%; height: 196px; margin-bottom: 18px;}
+.subVide .parteeYoutube ul li iframe { width: 100% !important; height: 196px !important;}
+
+
+
+@media screen and (max-width: 330px){
+    .parteeOpened span { font-size: 16px;}
+}
